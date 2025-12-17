@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>Lab 4 Webpage</title>
+        <link rel="stylesheet" type="text/css" href="Lab4style.css">
+        <style>
+        h1 { text-align:center; }
+        video { display:block; margin:auto; }
+        
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>Grace's Website</h1>
+            <nav>
+                 <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#form">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="home"class="section-box">
+            <article>
+                <h2>Welcome</h2>
+                <p>This is a simple webpage created using HTML5 and CSS.</p>
+            </article>
+            </section>
+
+        <section id="video" class="section-box">
+        
+         <h2>Video Section</h2>
+            <video width="320" controls>
+            <source src="sample.mp4" type="video/mp4">Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="form" class="section-box">
+            <h2>Contact Form</h2>
+                <form>
+                Name: <input type="text"><br><br>
+                Email: <input type="email"><br><br>
+
+                Gender:
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female<br><br>
+
+                Favorite Hobby:
+                <input type="checkbox"> Reading
+                <input type="checkbox"> Music<br><br>
+
+                <button>Submit</button>
+                </form>
+        </section>
+
+        <footer>
+        <p>&copy; 2025 My Website</p>
+        </footer>
+    </body>
+</html>
