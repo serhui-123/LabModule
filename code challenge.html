@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>Semester Dean's List Eligibility Results</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+            }
+
+            h1{
+                border-bottom: 2px solid blue;
+                padding-bottom: 10px;
+            }
+
+            
+            /* Big container box */
+            .results-container {
+                border: 2px dotted #999;
+                background-color: rgba(173, 216, 230, 0.25); /* very light blue */
+                padding: 15px;
+                margin-top: 15px;
+            }
+
+            /* Each student text */
+        .student {
+            padding: 8px 0;
+        }
+
+        /* Dotted separator line */
+        .divider {
+            border-bottom: 1px dotted #999;
+            margin: 10px 0;
+        }
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Semester Dean's List Eligibility Results</h1>
+        <div class="results-container">
+        <h2>Section 03 Result</h2>
+    
+    <script>
+        var studentdata = [
+            ['Ali Bin Ahmad',15,3.75],
+            ['Bala A/L Muthu',12,3.40],
+            ['Siti Nurhaliza',18,4.00],
+            ['Wong Mei Ling',10,3.50],
+            ['David Lee',15,2.95]
+        ];
+        
+         //Function to check Dean's List eligibility
+        function checkDeanList(gpa){
+            if(gpa >=3.50){
+                return "Dean's List Eligible";
+            }else{
+                return "Not Dean's List Eligible";
+            }
+        }
+
+
+        
+
+        //Loop through student data and display results
+        for (var i=0; i<studentdata.length; i++){
+            var name = studentdata[i][0];
+            var gpa = studentdata[i][2];
+            var status = checkDeanList(gpa);
+
+            document.write('<div class="student">');
+            document.write('<strong>Name:</strong> ' + name + '<br>');
+            document.write('<strong>Current GPA:</strong> ' + gpa + '<br>');
+            document.write('<strong>Status:</strong> ' + status);
+            document.write('</div>');
+
+            if (i < studentdata.length - 1) {
+                document.write('<div class="divider"></div>');
+            }
+
+            
+        }
+        
+
+        
+</script>
+
+</body>
+</html>
